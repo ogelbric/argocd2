@@ -49,4 +49,24 @@ kubectl apply -f ./namespaceargocd.yaml
 
 ![Version](https://github.com/ogelbric/argocd2/blob/main/Outcome2.png)
 
+## (4) Login to Supervisor cluster and argocd namespace
+
+```
+kubectl vsphere login --server 192.168.2.201 --vsphere-username administrator@vsphere.local --insecure-skip-tls-verify
+Logged in successfully.
+
+You have access to the following contexts:
+   192.168.2.201
+   namespace1000
+   namespaceargocd
+   svc-argocd-service-domain-c10
+   svc-auto-attach-domain-c10
+   svc-cci-ns-domain-c10
+   svc-tkg-domain-c10
+   svc-velero-domain-c10
+
+kubectl config use-context namespaceargocd
+Switched to context "namespaceargocd".
+```
+
 
