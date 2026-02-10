@@ -131,6 +131,7 @@ kubectl get secret  argocd-initial-admin-secret -o jsonpath='{.data.password}' |
 
 Login to the GUI with admin and password and then change the password 
 
+![Version](https://github.com/ogelbric/argocd2/blob/main/ArgoPasswd.png)
 
 
 
