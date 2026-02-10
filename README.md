@@ -15,4 +15,4 @@ Evironment: vCenter 9.0.1 with Foundational Loadbalancer
 
 The outcome is this: 
 
-![Version](https://github.com/ogelbric/argocd2/blob/main/supoutcome1.png)
+![Version](https://github.com/ogelbric/argocd2/blob/main/supOutcome1.png)
