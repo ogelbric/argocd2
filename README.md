@@ -121,6 +121,16 @@ argocd-server        LoadBalancer   10.96.1.185   192.168.2.207   80:32138/TCP,4
 
 ![Version](https://github.com/ogelbric/argocd2/blob/main/Outcome3.png)
 
+## (6) ArgCO password
+
+Get the initial password
+
+```
+kubectl get secret  argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d
+```
+
+Login to the GUI with admin and password and then change the password 
+
 
 
 
