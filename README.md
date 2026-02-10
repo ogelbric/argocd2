@@ -105,5 +105,23 @@ Apply argo yaml
 kubectl apply -f ./argo.yaml
 ```
 
+Outcome: 
+
+Get Service IP
+
+```
+kubectl get svc
+NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)                      AGE
+argocd-redis         ClusterIP      10.96.1.178   <none>          6379/TCP                     6m19s
+argocd-repo-server   ClusterIP      10.96.0.254   <none>          8081/TCP                     6m19s
+argocd-server        LoadBalancer   10.96.1.185   192.168.2.207   80:32138/TCP,443:30969/TCP   6m19s
+```
+
+![Version](https://github.com/ogelbric/argocd2/blob/main/Outcome4.png)
+
+![Version](https://github.com/ogelbric/argocd2/blob/main/Outcome3.png)
+
+
+
 
 
