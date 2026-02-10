@@ -16,3 +16,37 @@ Evironment: vCenter 9.0.1 with Foundational Loadbalancer
 The outcome is this: 
 
 ![Version](https://github.com/ogelbric/argocd2/blob/main/supOutcome1.png)
+
+## (3) Create namesoaces for the install
+
+namespace1000.yaml
+
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace1000 # Replace with your desired namespace name
+  labels:
+    # Optional labels
+    environment: production
+```
+namespaceargocd.yaml
+
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespaceargocd # Replace with your desired namespace name
+  labels:
+    # Optional labels
+    environment: production
+```
+
+```
+kubectl apply -f ./namespace1000.yaml
+kubectl apply -f ./namespaceargocd.yaml
+```
+
+![Version](https://github.com/ogelbric/argocd2/blob/main/Outcome2.png)
+
+
