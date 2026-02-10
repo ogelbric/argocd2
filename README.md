@@ -69,4 +69,41 @@ kubectl config use-context namespaceargocd
 Switched to context "namespaceargocd".
 ```
 
+## (5) ArgoCD version and yaml install 
+
+```
+kubectl explain argocd.spec.version
+```
+
+```
+GROUP:      argocd-service.vsphere.vmware.com
+KIND:       ArgoCD
+VERSION:    v1alpha1
+
+FIELD: version <string>
+
+DESCRIPTION:
+    Version specifies the ArgoCD Carvel Package version to deploy.
+    The version must follow the pattern: X.Y.Z+vmware.W-vks.V
+    Example: "3.0.19+vmware.1-vks.1"
+```
+
+argo.yaml
+
+```
+apiVersion: argocd-service.vsphere.vmware.com/v1alpha1
+kind: ArgoCD
+metadata:
+  name: argocd-1
+  namespace: namespaceargocd
+spec:
+  version: 3.0.19+vmware.1-vks.1
+```
+Apply argo yaml
+
+```
+kubectl apply -f ./argo.yaml
+```
+
+
 
