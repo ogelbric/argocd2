@@ -134,5 +134,23 @@ Login to the GUI with admin and password and then change the password
 ![Version](https://github.com/ogelbric/argocd2/blob/main/ArgoPasswd.png)
 
 
+## (7) Install ArgoCD CLI and login 
+
+```
+sudo curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo chmod +x /usr/local/bin/argocd
+```
+```
+argocd login 192.168.2.207
+```
+```
+WARNING: server certificate had error: error creating connection: tls: failed to verify certificate: x509: cannot validate certificate for 192.168.2.207 because it doesn't contain any IP SANs. Proceed insecurely (y/n)? y
+Username: admin
+Password:
+'admin:login' logged in successfully
+Context '192.168.2.207' updated
+```
+
+
 
 
