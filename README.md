@@ -163,5 +163,11 @@ Outcome:
 
 ![Version](https://github.com/ogelbric/argocd2/blob/main/ArgoSupOutcome.png)
 
+## (9) Deploying a Guest Cluster
+
+```
+ argocd app create vks-cluster-deploy --repo https://github.com/ogelbric/argocd2.git --path vks --dest-server https://192.168.2.201:443 --dest-namespace namespace1000 --auto-prune --sync-policy auto
+```
+Outcome: 
 
 
