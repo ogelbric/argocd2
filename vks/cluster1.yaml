@@ -39,4 +39,4 @@ spec:
       machineDeployments:
         - class: node-pool
           name: cluster1-np-uybu
-          replicas: 1
+          replicas: 2
