@@ -1,7 +1,7 @@
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
-  name: cluster10
+  name: cluster14
   namespace: namespace1000
 spec:
   clusterNetwork:
@@ -30,13 +30,28 @@ spec:
         value: guaranteed-xsmall
       - name: storageClass
         value: k8storage
+      - name: volumes
+        value:
+        - name: etcd
+          mountPath: /var/lib/etcd
+          storageClass: k8storage
+          capacity: 5Gi
+        - name: containerd
+          mountPath: /var/lib/containerd
+          storageClass: k8storage
+          capacity: 6Gi
+        - name: kubelet-override
+          mountPath: /var/lib/kubelet
+          storageClass: k8storage
+          capacity: 7Gi
+        - name: log
+          mountPath: /var/log
+          storageClass: k8storage
+          capacity: 8Gi
     controlPlane:
       replicas: 1
-      metadata:
-        annotations:
-          run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-c60d154896df923b4
     workers:
       machineDeployments:
         - class: node-pool
-          name: cluster10-worker
+          name: cluster14-worker
           replicas: 1
