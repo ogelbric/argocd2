@@ -139,6 +139,12 @@ Login to the GUI with admin and password and then change the password (command l
 ```
 sudo curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
 sudo chmod +x /usr/local/bin/argocd
+
+For adding the supervisor cluster to ArgoCD you need the CLI from the broadcom support site:
+
+gzip -d argocd-cli-linux-amd64-v3.0.19-vcf.gz
+sudo cp argocd-cli-linux-amd64-v3.0.19-vcf /usr/local/bin/argocd
+
 ```
 ```
 argocd login 192.168.2.207
@@ -150,7 +156,14 @@ Password:
 'admin:login' logged in successfully
 Context '192.168.2.207' updated
 ```
+## (8) Adding the supervisor cluster to ArgoCD
 
+```
+argocd cluster add 192.168.2.201 --namespace namespaceargocd --namespace namespace1000 --kubeconfig ~/.kube/config
+```
+Outcome: 
+
+![Version](https://github.com/ogelbric/argocd2/blob/main/ArgoSupOutcome.png)
 
 
 
