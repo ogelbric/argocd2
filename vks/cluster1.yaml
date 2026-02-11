@@ -39,4 +39,4 @@ spec:
       machineDeployments:
         - class: node-pool
           name: cluster10-worker
-          replicas: 2
+          replicas: 1
