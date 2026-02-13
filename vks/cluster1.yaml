@@ -54,4 +54,4 @@ spec:
       machineDeployments:
         - class: node-pool
           name: cluster20-worker
-          replicas: 1
+          replicas: 2
