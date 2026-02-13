@@ -1,7 +1,7 @@
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
-  name: cluster20
+  name: cluster22
   namespace: namespace1000
 spec:
   clusterNetwork:
@@ -32,10 +32,6 @@ spec:
         value: k8storage
       - name: volumes
         value:
-        - name: etcd
-          mountPath: /var/lib/etcd
-          storageClass: k8storage
-          capacity: 5Gi
         - name: containerd
           mountPath: /var/lib/containerd
           storageClass: k8storage
@@ -53,5 +49,5 @@ spec:
     workers:
       machineDeployments:
         - class: node-pool
-          name: cluster20-worker
+          name: cluster22-worker
           replicas: 2
