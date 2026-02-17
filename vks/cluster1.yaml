@@ -1,7 +1,7 @@
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
-  name: cluster22
+  name: cluster23
   namespace: namespace1000
 spec:
   clusterNetwork:
@@ -49,5 +49,5 @@ spec:
     workers:
       machineDeployments:
         - class: node-pool
-          name: cluster22-worker
+          name: cluster23-worker
           replicas: 2
