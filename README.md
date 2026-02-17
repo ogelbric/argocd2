@@ -173,3 +173,12 @@ Please see above the vks directory with the cluster1 yaml file.
 Outcome: 
 
 
+## (10) Delete the ArgoCD app
+
+```
+argocd app delete vks-cluster-deploy
+```
+
+
+
+
