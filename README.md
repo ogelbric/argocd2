@@ -17,7 +17,7 @@ The outcome is this:
 
 ![Version](https://github.com/ogelbric/argocd2/blob/main/supOutcome1.png)
 
-## (3) Create namesoaces for the install
+## (3) Create namespaces for the install
 
 namespace1000.yaml
 
