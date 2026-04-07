@@ -19,6 +19,10 @@ The outcome is this:
 
 ## (3) Create namespaces for the install
 
+### for this step to work you need to enable the namespace service on the supervisor cluster
+
+![Version](https://github.com/ogelbric/argocd2/blob/main/namespaceenable.png)
+
 namespace1000.yaml
 
 ```
